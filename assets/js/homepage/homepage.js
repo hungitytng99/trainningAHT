@@ -43,5 +43,3 @@ $(document).ready(function() {
 });
 
 //Prevent scroll when modal is opening
-var test = document.querySelector("#category-menu-status");
-console.log(test);
