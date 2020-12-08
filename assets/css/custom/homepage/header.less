@@ -1,0 +1,253 @@
+/*********************** Header static ***********************/
+
+.header-static {
+    height: @header-static-height;
+    width: 100%;
+    background-color: #222222;
+    color:@med-grey-color;
+    font-size: 1.44rem;
+    padding: 0 30px;
+    font-weight: 450;
+    font-family: "Open Sans", sans-serif;
+
+}
+
+.static-icon {
+    margin: 0 6px 0 30px;
+    font-size: 1.3rem;
+}
+
+.header-static__left.static-icon {
+    margin: 0 6px 0 0px;
+}
+
+.header-static__right {
+    &-setting {
+        color: @med-grey-color;
+    }
+
+    &-login {
+        color: @med-grey-color;
+        
+    }
+}
+
+
+
+/*********************** Header dynamic ***********************/
+html:not([data-scroll="0"]) {
+    .header-dynamic {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        animation: dynamic-down 0.8s ease-out;
+    }
+}
+
+.header-dynamic {
+    position: sticky;
+    left: 0;
+    right: 0;
+    top: 0;
+    min-height: @header-dynamic-height;
+    width: 100%;
+    padding: 0 30px;
+    border-bottom: 1px solid @light-grey-color;
+    background-color: @white-color;
+    z-index: 2;
+}
+
+.header-dynamic__category-icon{
+    display: none;
+}
+
+.header-dynamic__logo {
+    width: 10.9%;
+    min-width: 150px;
+    max-width: 200px;
+    padding-top: 5px;
+    &-img {
+        width: 100%;
+    }
+}
+
+.header-dynamic__category {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    flex: 1;
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+
+    &-item {
+        padding: 0px 27px;
+        // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        line-height: 30px;
+
+        &.-search {
+            padding: 0px;
+            cursor: pointer;
+
+            &:hover {
+                color: @strong-light-blue-color;
+            }
+        }
+    }
+
+    &-link {
+        color: @black-color;
+
+        &.--active {
+            color: @strong-light-blue-color;
+        }
+
+        &:hover {
+            color: @strong-light-blue-color;
+        }
+    }
+    &-icon{
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.header-dynamic__right {
+    margin-top: 1px;
+    &.search-img{
+        cursor: pointer;
+        margin-right: 30px;
+    }
+    &.left-img {
+        cursor: pointer;
+        margin-right: 30px;
+    }
+
+    &.cart-img {
+        cursor: pointer;
+    }
+}
+// Category menu
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#category-menu-status {
+    display: none;
+}
+
+.category__status-checkbox:checked~.modal__overlay-category {
+    display: block;
+   
+}
+.category__status-checkbox:checked~.category-menu {
+    transform: translateX(0%);
+    opacity: 1;
+    z-index: 999;
+    display: block;
+}
+.modal__overlay-category {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: appear linear 0.3s;
+    cursor: pointer;
+    z-index: 998;
+    display: none;
+}
+
+.modal.modal-category {
+    display: none;
+}
+
+.category-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background-color: @white-color;
+    width: 60%;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all linear 0.3s;
+    z-index: 999;
+}
+
+.category-menu__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    background-color: #000;
+    color: @white-color;
+}
+
+.category-menu__title-text {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+
+.category-menu__list {
+    list-style: none;
+    padding-left: 0px;
+    margin: 0;
+}
+
+.category-menu__item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.category-menu__link {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    padding: 15px 20px;
+    width: 100%;
+}
+
+.category-menu__link:active {
+    color: #999;
+}
+
+.category-menu__item-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-left: 1px solid rgb(233, 233, 233);
+}
+
+.category-menu__icon {
+    font-size: 1.3rem;
+    color: #999;
+}
+
+.category-menu__item-icon{
+    padding: 15px 10px 15px 25px;
+    font-size: 1.9rem;
+}
+.categoru-menu__item-search{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border:none;
+    padding-left: 15px;
+    padding-right: 20px;
+    font-size: 1.6rem;
+}

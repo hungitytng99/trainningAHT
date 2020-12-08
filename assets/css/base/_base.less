@@ -1,0 +1,63 @@
+:root {}
+
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    width: 100.01%;
+}
+
+ul,
+li {
+    list-style: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+button:focus {
+    outline: none;
+}
+
+.flex {
+    &-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-spacebetween {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+/* Mixins */
+// .transition($args) {
+//     -webkit-transition: $args;
+//     -moz-transition: $args;
+//     -ms-transition: $args;
+//     -o-transition: $args;
+//     transition: $args;
+// }
+// .animation($str) {
+//     -webkit-animation: $str;
+//     -moz-animation: $str;
+//     -ms-animation: $str;
+//     -o-animation: $str;
+//     animation: $str;      
+//   }
+
+@import "content.less";
+@import "grid.less";

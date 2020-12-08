@@ -1,0 +1,300 @@
+/*********************** Container ***********************/
+/* Ads */
+.container-img {
+    margin-top: 30px;
+    margin-bottom: 70px;
+
+    &__left {
+        width: 100%;
+        position: relative;
+    }
+
+    &__right {
+        width: 100%;
+        display: block;
+
+        &.--margin {
+            margin-top: 30px;
+        }
+        &.--has-link{
+            position: relative;
+            .container-img__shop.--img-right{
+                position: absolute;
+                left: 11.2%;
+                bottom: 33.4%;
+            }
+        }
+    }
+
+    &__shop{
+        position: absolute;
+        right: 12.53%;
+        bottom: 27.3%;
+        &-link{
+            display: block;
+            width: 106px;
+            height: 40px;
+            color: @white-color;
+            background-color: @strong-light-blue-color;
+            text-align: center;
+            line-height:40px;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+/* Product */
+.container-product {
+    padding-bottom: 23px;
+
+    &__text {
+        margin-bottom: 50px;
+        text-transform: uppercase;
+
+        &-franco {
+            color: @strong-light-blue-color;
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: 6px;
+            margin: 0;
+        }
+
+        &-feature {
+            font-size: 2.3rem;
+            font-weight: 700;
+            text-shadow: 1px 0px 1px @light-grey-color;
+            margin-bottom: 29px;
+            margin-top: 18px;
+            letter-spacing: 3px;
+        }
+
+        &.-underline {
+            height: 1px;
+            width: 51px;
+            background-color: @strong-light-blue-color;
+        }
+    }
+
+    &__item-order {
+        @margin-order-btn: 5px;
+
+        &-product {
+            position: relative;
+            // max-height: 323px;
+            object-fit: contain;
+            width: 100%;
+        }
+
+        &-btn {
+            position: absolute;
+            bottom: @margin-order-btn *2;
+            left: @margin-order-btn;
+            width: 118px;
+            height: 40px;
+            background-color: @white-color;
+            border: none;
+            padding: 0;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-weight: 500;
+
+            &:hover {
+                color: @strong-light-blue-color;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__item-price {
+        &.-title {
+            font-size: 1.34rem;
+            font-weight: bold;
+            margin-top: 14px;
+        }
+
+        &-favor {
+            margin: 6px 0px;
+
+            &.-item {
+                font-size: 1.1rem;
+                letter-spacing: -1px;
+                font-weight: 500;
+
+                &.--active {
+                    color: @star-gold;
+                    text-shadow: 1px 0px 1px @yellow-color;
+
+                }
+            }
+        }
+
+        &.-wrap {
+            display: flex;
+            font-size: 1.6rem;
+            margin-bottom: 46px;
+            font-family: "Open Sans", sans-serif;
+
+        }
+
+        &-old {
+            color: @grey-color;
+        }
+
+        &-new {
+            color: @strong-light-blue-color;
+            font-weight: bold;
+            margin-left: 4px;
+        }
+    }
+}
+
+/* News */
+.news {
+    position: relative;
+
+    &__background {
+        height: 708px;
+
+        &-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    &__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        &-text {
+            flex-direction: column;
+
+            &-latest {
+                color: @strong-light-blue-color;
+                margin: 77px 0px 17px 6px;
+                text-transform: uppercase;
+                font-size: 1.2rem;
+                font-weight: 800;
+                letter-spacing: 5.5px;
+            }
+
+            &-news {
+                text-transform: uppercase;
+                font-size: 2.4rem;
+                font-weight: 800;
+                letter-spacing: 2px;
+                margin-bottom: 29px;
+            }
+
+            &-underline {
+                background-color: @strong-light-blue-color;
+                height: 1px;
+                width: 50px;
+                margin-bottom: 50px;
+            }
+        }
+
+        &-wrapper {
+            &-img {}
+
+            &-item {
+                background-color: @white-color;
+
+                &-text {
+                    padding: 0 29px 17px 20px;
+                    border-bottom: 1px solid #ededed;
+                }
+
+                &.-title {
+                    a {
+                        margin: 17px 0 15px 0;
+                        font-size: 1.6rem;
+                        line-height: 2rem;
+                        color: #000000;
+                        font-weight: 700;
+                        font-family: "Montserrat", sans-serif;
+                    }
+
+
+                    &:hover a {
+                        color: @strong-light-blue-color;
+                    }
+                }
+
+                &.-content {
+                    margin: 0;
+                    font-size: 1.46rem;
+                    line-height: 2.2rem;
+                    color: #424242;
+                    font-weight: 400;
+                    font-family: "Open Sans", sans-serif;
+                }
+            }
+        }
+    }
+
+    &__wrapper-response {
+        display: flex;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
+        font-family: "Open Sans", sans-serif;
+        color: #c0c0c0;
+        padding: 16px 21px;
+
+        &-comments {
+            display: flex;
+            margin-right: 32px;
+
+            &-icon {
+                padding-right: 5px;
+            }
+        }
+
+        &-favor {
+            display: flex;
+
+            &-icon {
+                padding-right: 4px;
+            }
+        }
+    }
+}
+
+/* Custom Carousel */
+.owl-carousel .owl-dots {
+    padding-top: 11px;
+
+    &.disabled {
+        display: block;
+    }
+
+    .owl-dot {
+        width: 10px;
+        height: 10px;
+        margin: 7px;
+
+        &.active {
+            span {
+                background: @strong-light-blue-color;
+                width: 13px;
+                height: 13px;
+
+            }
+        }
+
+        &:hover {
+            span {
+                background: @strong-light-blue-color;
+            }
+        }
+    }
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    background: #b3a6c7;
+    margin: 0;
+
+}

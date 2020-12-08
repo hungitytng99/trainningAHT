@@ -1,0 +1,31 @@
+@black-color: #000;
+@light-grey-color: #ddd;
+@strong-light-blue-color: #8262b5;
+@med-grey-color: #4f4f4f;
+@white-color: #fff;
+@star-gold: #f8ba04;
+@yellow-color: rgba(245, 241, 8, 0.9);
+@low-grey-color: #d1d1d1;
+@s-low-grey-color: #f0f0f0;
+@grey-color: #999;
+
+
+@header-static-height: 46px;
+@header-dynamic-height: 80px;
+
+@keyframes dynamic-down {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@import "header.less";
+@import "content.less";
+@import "footer.less";
+@import "responsive.less";
