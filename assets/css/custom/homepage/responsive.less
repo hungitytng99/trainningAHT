@@ -33,6 +33,7 @@
 
     .container {
         padding: 0px 20px;
+
     }
 
     .news {
@@ -86,6 +87,9 @@
             width: 20%;
             max-width: 210px;
             width: 210px;
+            &-img{
+                margin-left: 35px;
+            }
         }
 
         &__category {
@@ -115,18 +119,33 @@
         bottom: 25%;
 
         &-link {
-            width: 90px;
-            height: 34px;
-            line-height: 34px;
+            width: 106px;
+            height: 40px;
+            line-height: 40px;
         }
     }
 
     .container-img__right {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        width: 48.5%;
+
         &.--has-link {
             .container-img__shop.--img-right {
                 left: 11.1%;
-                bottom: 33%;
+                bottom: 21%;
             }
+        }
+
+        &.--margin {
+            display: none;
+        }
+
+        &.--mobile {
+            display: block;
+            width: 100%;
+            margin-top: 0px;
         }
     }
 
@@ -158,6 +177,14 @@
         padding-right: 11px;
     }
 
+    .header-dynamic {
+        &__logo {
+            &-img{
+                margin-left: 4px;
+            }
+        }
+    }
+
     .container-img__shop {
         right: 12.5%;
         bottom: 22%;
@@ -182,7 +209,7 @@
         &.--has-link {
             .container-img__shop.--img-right {
                 left: 11.1%;
-                bottom: 25%;
+                bottom: 17%;
             }
         }
     }
@@ -230,13 +257,22 @@
 
     /* IMG dau trang */
     .container-img__right {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+        width: 100%;
         &.--has-link {
             .container-img__shop.--img-right {
                 left: 11.1%;
-                bottom: 13%;
+                bottom: 24%;
             }
         }
+        &.--mobile{
+            margin-top: 10px;
+        }
     }
+
 
 }
 
@@ -263,6 +299,7 @@
 
     .header-dynamic {
         padding: 0 5px;
+
         &__logo {
             max-width: 180px;
         }
