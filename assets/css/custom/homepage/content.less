@@ -12,7 +12,7 @@
     &__right {
         width: 100%;
         display: block;
-
+        position: relative;
         &.--margin {
             margin-top: 30px;
         }
@@ -28,7 +28,40 @@
             display: none;
         }
     }
-
+    &__text {
+        &-material {
+            position: absolute;
+            right: 12.53%;
+            bottom: 39%;
+            font-size: 30px;
+            color: #000000;
+            font-weight: 900;
+            font-family: "Pacifico","san-serif";
+        }
+        &.-right{
+            position: absolute;
+            top : 39%;
+            left: 16%;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-family: "Montserrat","san-serif";
+            &.-bottom{
+                top: 37%;
+                left: 11.2%;
+            }
+            &-hint {
+                color: #616161;
+                font-weight: 500;
+                letter-spacing: 3px;
+            }
+            &-bold {
+                color:#000;
+                font-weight: bold;
+                font-size: 2rem;
+                margin-top: 4px;
+            }
+        }
+    }
     &__shop{
         position: absolute;
         right: 12.53%;
@@ -112,7 +145,7 @@
         &.-title {
             font-size: 1.34rem;
             font-weight: bold;
-            margin-top: 14px;
+            padding-top: 14px;
         }
 
         &-favor {
@@ -236,6 +269,10 @@
                     font-family: "Open Sans", sans-serif;
                 }
             }
+
+            &-link{
+                position: relative;
+            }
         }
     }
 
@@ -264,6 +301,30 @@
             }
         }
     }
+
+    &__calendar {
+        position: absolute;
+        top: 22px;
+        left: 20px;
+        height: 60px;
+        width: 60px;
+        background-color: #a1d1dd;
+        font-size: 14px;
+        color: #ffffff;
+        font-family: "Montserrat", "san-serif";
+        flex-direction: column;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            bottom: 6px;
+            left: 6px;
+            border: 1px solid @white-color;
+        }
+    }
+
 }
 
 /* Custom Carousel */
@@ -284,7 +345,6 @@
                 background: @strong-light-blue-color;
                 width: 13px;
                 height: 13px;
-
             }
         }
 

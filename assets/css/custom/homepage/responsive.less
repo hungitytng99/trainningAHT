@@ -1,3 +1,16 @@
+@media (max-width:1300px){
+    .header-dynamic__category{
+        &-list{
+        margin: 0px;
+
+        }
+
+        &-item{
+            padding: 0 25px 0 25px
+        }
+    }
+}
+
 @media (max-width: 1200px) {
     .header-static {
         padding: 0 20px;
@@ -12,27 +25,20 @@
             font-size: 1.2rem;
 
             &-item {
-                padding: 0px 20px;
+                padding: 0px 15px;
             }
-
-            &-link {}
         }
 
     }
 
     .header-dynamic__right {
-        &.left-img {
+        &.left-icom {
             margin-right: 15px;
-            max-width: 25px;
-        }
-
-        &.cart-img {
-            max-width: 25px;
         }
     }
 
     .container {
-        padding: 0px 20px;
+        padding: 0px 15px;
 
     }
 
@@ -104,12 +110,12 @@
     }
 
     .header-dynamic__right {
-        &.left-img {
+        &.left-icon {
             margin-right: 25px;
             max-width: 30px;
         }
 
-        &.cart-img {
+        &.cart-icon {
             max-width: 30px;
         }
     }
@@ -126,11 +132,10 @@
     }
 
     .container-img__right {
-        margin-top: 10px;
+        width: 93%;
+        padding-top: 8px;
         display: flex;
         justify-content: space-between;
-        width: 48.5%;
-
         &.--has-link {
             .container-img__shop.--img-right {
                 left: 11.1%;
@@ -148,7 +153,23 @@
             margin-top: 0px;
         }
     }
-
+    .container-img__text{
+        &-material {
+            font-size: 3.8rem;
+        }
+        &.-right{
+            &.-bottom{
+                top: 35%;
+            }
+            &-hint {
+                font-size: 2.6rem;
+            }
+            &-bold {
+                margin-top: 14px;
+                font-size: 2.8rem;
+            }
+        }
+    }
 
     .footer-contact {
         padding: 0 20px;
@@ -172,11 +193,6 @@
 }
 
 @media (max-width: 768px) {
-    .col {
-        padding-left: 11px;
-        padding-right: 11px;
-    }
-
     .header-dynamic {
         &__logo {
             &-img{
@@ -210,6 +226,24 @@
             .container-img__shop.--img-right {
                 left: 11.1%;
                 bottom: 17%;
+            }
+        }
+    }
+
+    .container-img__text{
+        &-material {
+            font-size: 2.6rem;
+        }
+        &.-right{
+            &.-bottom{
+                top: 35%;
+            }
+            &-hint {
+                font-size: 1rem;
+            }
+            &-bold {
+                margin-top: 0px;
+                font-size: 1.2rem;
             }
         }
     }
@@ -250,26 +284,42 @@
     .footer-contact {
         padding: 0 5px;
     }
-
-    .container {
-        padding: 0 10px;
-    }
-
     /* IMG dau trang */
     .container-img__right {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 5px;
         width: 100%;
+        padding-top: 8px;
         &.--has-link {
             .container-img__shop.--img-right {
                 left: 11.1%;
                 bottom: 24%;
             }
         }
+        &.--no-link{
+            padding-top: 0px;
+        }
         &.--mobile{
-            margin-top: 10px;
+            padding-top: 13px;
+        }
+    }
+
+    .container-img__text{
+        &-material {
+            font-size: 1.8rem;
+        }
+        &.-right{
+            &.-bottom{
+                top: 32%;
+            }
+            &-hint {
+                font-size: 2rem;
+            }
+            &-bold {
+                margin-top: 10px;
+                font-size: 2.2rem;
+            }
         }
     }
 
@@ -277,11 +327,6 @@
 }
 
 @media (max-width: 404px) {
-    .col {
-        padding-left: 3px;
-        padding-right: 3px;
-    }
-
     .header-static {
         font-size: 1.15rem;
         height: 47px;
@@ -305,7 +350,7 @@
         }
 
         &__right {
-            &.left-img {
+            &.left-icon {
                 margin-right: 5px;
             }
         }
@@ -324,7 +369,6 @@
     }
 
     .container {
-        padding: 0 5px;
 
         &-img__right {
             &.--margin {
